@@ -1,3 +1,9 @@
-export function Chat() {
-  return <div>test Message</div>;
+export function Chat({ messages }) {
+  return (
+    <div>
+      {messages.map(({ role, content }) => (
+        <div>{content}</div>
+      ))}
+    </div>
+  );
 }
